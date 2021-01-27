@@ -8,6 +8,11 @@ RUN pip install --no-cache-dir jupyterlab
 
 RUN pip install --upgrade jupyterlab jupyterlab-git
 
+RUN jupyter serverextension enable --py jupyterlab_git --sys-prefix
+
+RUN jupyter lab build
+
+
 
 
 EXPOSE 8888
