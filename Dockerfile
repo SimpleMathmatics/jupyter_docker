@@ -10,7 +10,6 @@ RUN pip install jupyterlab-git
 
 RUN jupyter serverextension enable --py jupyterlab_git --sys-prefix
 
-RUN jupyter lab build
 
 
 
