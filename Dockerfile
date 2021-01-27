@@ -9,6 +9,8 @@ RUN apt-get install -y npm
 
 RUN pip install --no-cache-dir jupyter
 
+RUN pip install tensorflow
+
 RUN pip install --no-cache-dir jupyterlab==2.0.0
 
 RUN pip install jupyterlab-git
@@ -16,6 +18,7 @@ RUN pip install jupyterlab-git
 RUN jupyter serverextension enable --py jupyterlab_git --sys-prefix
 
 RUN jupyter lab build
+
 
 
 EXPOSE 8888
