@@ -2,9 +2,10 @@ FROM python:3.8
 
 WORKDIR /jup
 
-RUN apt install nodejs
-
-RUN apt install npm
+RUN apt install curl
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN apt-get install -y nodejs
+RUN apt-get install -y npm
 
 RUN pip install --no-cache-dir jupyter
 
